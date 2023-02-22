@@ -4,10 +4,27 @@
 }
 
 body {
-    background-color: burlywood;
+    background-color: rgb(179, 148, 107);
 }
 
 .game-card {
     height: 100vh;
     font-family: 'Open Sans', monospace;
+    background-color: rgb(189, 162, 127);
+}
+
+.card {
+    background-color: rgb(141, 91, 67);
+    border-radius: 100px;
+    border: outset rgb(148, 121, 89) 10px;
+}
+
+.card-title {
+    background: linear-gradient(90deg, #505050 0%, #ffffff7e 25%, #ffffff7c 75%, #505050 100%);
+    border-radius: 10px;
+    border: inset rgb(158, 157, 157);
+}
+
+#answerField {
+    text-shadow: 0 0 10px rgb(255, 255, 255);
 }
