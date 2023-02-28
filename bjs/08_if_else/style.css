@@ -28,3 +28,25 @@ body {
 #answerField {
     text-shadow: 0 0 10px rgb(255, 255, 255);
 }
+
+#btnEqual {
+    background-color: darkkhaki;
+    border: outset;
+}
+
+#btnLess, #btnOver {
+    background-color: rgba(210, 105, 30, 0.596);
+    border: outset;
+}
+
+#btnRetry {
+    background-color: darkgrey;
+    color: white;
+    border: outset;
+    text-decoration: none;
+}
+
+.card-footer {
+    border-style: none;
+    background-color: rgb(141, 91, 67);
+}

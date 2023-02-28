@@ -7,11 +7,14 @@
 }
 
 body {
+    margin: 10px;
     background-color: rgb(89, 17, 17);
     display: flex;
     align-items: center;
     justify-content: center;
     height: 75vh;
+    border: double 10px aliceblue;
+    height: 980px;
 }
 
 ul {
