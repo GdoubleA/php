@@ -1,0 +1,37 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+p, h3, h4, h5 {
+    color: black;
+    font-size: xx-large;
+}
+
+body {
+    background-color: darkslategray;
+}
+
+.card-body {
+    background-color: rgba(0, 0, 139, 0.377);
+    border-radius: 5px;
+    width: 1000px;
+    max-height: 500px;
+    position: absolute;
+    text-align: center;
+    top: 20vh;
+}
+
+.card-header {
+    background-color: rgb(255, 228, 196);
+    border-radius: 5px;
+    top: 50px;
+    position: absolute;
+    border: double;
+}
+.card {
+    background-color: darksalmon;
+    height: 1000px;
+    display: flex;
+    align-items: center;
+}
+
