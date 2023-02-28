@@ -176,3 +176,7 @@ const personGenerator = {
         return this.person;
     }
 };
+
+document.querySelector('#btnRetry').addEventListener('click', ()=> {
+    window.location.reload();
+})

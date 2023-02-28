@@ -33,5 +33,15 @@ body {
     height: 1000px;
     display: flex;
     align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#btnRetry {
+    margin-top: 70px;
+    width: 400px;
+    height: 50px;
+    font-size: 25px;
+    border: outset rgb(71, 145, 145);
 }
 
