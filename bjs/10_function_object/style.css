@@ -9,16 +9,18 @@ p, h3, h4, h5 {
 
 body {
     background-color: darkslategray;
+    
 }
 
 .card-body {
-    background-color: rgba(0, 0, 139, 0.377);
+    background-color: rgb(123, 123, 167);
     border-radius: 5px;
     width: 1000px;
     max-height: 500px;
     position: absolute;
     text-align: center;
     top: 20vh;
+    border: solid ;
 }
 
 .card-header {
@@ -31,6 +33,7 @@ body {
 .card {
     background-color: darksalmon;
     height: 1000px;
+    width: 1000px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -38,10 +41,33 @@ body {
 }
 
 #btnRetry {
-    margin-top: 70px;
+    margin-top: 130px;
     width: 400px;
     height: 50px;
     font-size: 25px;
     border: outset rgb(71, 145, 145);
 }
+
+#deletePersonData {
+    margin-top: 5px;
+    width: 400px;
+    height: 50px;
+    font-size: 25px;
+    border: outset rgb(71, 145, 145);
+}
+
+.col-md-6 {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.row {
+    justify-content: center;
+}
+
+
 

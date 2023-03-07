@@ -10,3 +10,15 @@ window.onload = function()
     document.querySelector('#profOutput').innerText = initPerson.prof;
 };
 
+document.querySelector('#deletePersonData').addEventListener('click', function () {
+    document.getElementById('firstNameOutput').innerText = "нажмите 'Cгенерировать'";
+    document.getElementById('surnameOutput').innerText = "Очищено";
+    document.getElementById('middleNameOutput').innerText = "";
+    document.getElementById('genderOutput').innerText = "";
+    document.getElementById('profOutput').innerText = "";
+    document.getElementById('birthYearOutput').innerText = "";
+})
+
+document.querySelector('#btnRetry').addEventListener('click', function () {
+    return window.onload();
+})

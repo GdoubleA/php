@@ -101,7 +101,7 @@ const personGenerator = {
             "id_1": "бухгалтер",
             "id_2": "стюардесса",
             "id_3": "стилист",
-            "id_4": "маркетолог.",
+            "id_4": "маркетолог",
             "id_5": "фитнес-тренер",
             "id_6": "педагог",
             "id_7": "врач",
@@ -110,10 +110,27 @@ const personGenerator = {
             "id_10": "программист"
         }
     }`,
+    dateBirthJson: `{
+        "count": 12,
+        "list": {     
+            "id_1": "января",
+            "id_2": "февраля",
+            "id_3": "марта",
+            "id_4": "апреля",
+            "id_5": "мая",
+            "id_6": "июня",
+            "id_7": "июля",
+            "id_8": "августа",
+            "id_9": "сентября",
+            "id_10": "октября",
+            "id_11": "ноября",
+            "id_12": "декабря"
+        }
+    }`,
 
 
-    GENDER_MALE: 'Мужчина',
-    GENDER_FEMALE: 'Женщина',
+    GENDER_MALE: 'Мужчина,',
+    GENDER_FEMALE: 'Женщина,',
 
     randomIntNumber: (max = 1, min = 0) => Math.floor(Math.random() * (max - min + 1) + min),
 
@@ -121,8 +138,17 @@ const personGenerator = {
         return this.randomIntNumber() > 0 ? this.GENDER_MALE : this.GENDER_FEMALE; //  sex generator
     },
 
-    randomBirthYear: function() {
-        return this.randomIntNumber(2020, 1965); //  date of birth generator
+    // randomBirthYear: function() {
+    //     return `${this.randomIntNumber(2020, 1965)} года рождения`; //  date of birth generator
+    // },
+
+    randomBirthYear: function () {
+        let monthNumber = this.randomIntNumber(12, 1); // Создание переменной и рандомный выбор месяца для вызова функции randomValue ниже (передается в нее как аргумент) и также это поможет в  дальнейшем определении четных и нечетных месяцев
+        let monthValue = this.randomValue(this.dateBirthJson, 1, 0, 0, monthNumber); // Вывод выбранного месяца в текстовом варианте
+        let dayBirth = (monthNumber === 2) ? this.randomIntNumber(28, 1) : (monthNumber === 4 || monthNumber  === 6 || monthNumber === 9 || monthNumber === 11) ? this.randomIntNumber(30, 1) : this.randomIntNumber(31, 1); // Вывод дня в зависимости от месяца
+        let yearBirth = this.randomIntNumber(2000, 1960); // Вывод года рождения
+        let outputFullDate = `${dayBirth} ${monthValue} ${yearBirth} года рождения`; // Вывод полной даты в формате (день,месяц,год)
+        return outputFullDate;
     },
 
     randomValue: function (json) {
@@ -132,7 +158,7 @@ const personGenerator = {
     },
 
     randomFirstName: function() {
-        if (this.person.gender == 'Мужчина') {
+        if (this.person.gender == 'Мужчина,') {
             return this.randomValue(this.firstNameMaleJson);    // name generator
         } else {
             return this.randomValue(this.firstNameFemaleJson)
@@ -141,7 +167,7 @@ const personGenerator = {
 
 
      randomSurname: function() {
-        if (this.person.gender == 'Мужчина') {
+        if (this.person.gender == 'Мужчина,') {
             return this.randomValue(this.surnameJson);          // surname generator
         } else {
             return `${this.randomValue(this.surnameJson)}a`
@@ -149,7 +175,7 @@ const personGenerator = {
     },
 
     randomMiddleName: function() {
-        if (this.person.gender == 'Мужчина') {
+        if (this.person.gender == 'Мужчина,') {
             return this.randomValue(this.middleNameMaleJson);
         } else {                                                //  middlename generator
             return this.randomValue(this.middleNameFemaleJson);
@@ -157,10 +183,10 @@ const personGenerator = {
     },
 
     randomProf: function() {
-        if (this.person.gender == 'Мужчина') {
-            return this.randomValue(this.professionMaleJson);
+        if (this.person.gender == 'Мужчина,') {
+            return `по профессии: ${this.randomValue(this.professionMaleJson)}`;
         } else {                                                //  profession generator
-            return this.randomValue(this.professionFemaleJson);
+            return `по профессии: ${this.randomValue(this.professionFemaleJson)}`;
         }
     },
 
@@ -177,6 +203,3 @@ const personGenerator = {
     }
 };
 
-document.querySelector('#btnRetry').addEventListener('click', ()=> {
-    window.location.reload();
-})
