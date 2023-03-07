@@ -55,6 +55,9 @@ body {
     font-size: 25px;
     border: outset rgb(71, 145, 145);
 }
+#btnRetry:active, #deletePersonData:active {
+    background: linear-gradient(90deg, #C72B2B 0%, #AFD25B 10%, #A9EA78 22%, #57EFD4 34%, #4169EA 47%, #8C56E0 57%, #E32AEF 69%, #E41B92 80%, #E01A68 92%, #F50808 100%);
+}
 
 .col-md-6 {
     display: flex;
